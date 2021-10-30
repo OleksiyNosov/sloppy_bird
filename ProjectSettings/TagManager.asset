@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackgroundSky
+    uniqueID: 4013368983
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bird
+    uniqueID: 3682696935
+    locked: 0
+  - name: Ground
+    uniqueID: 984247069
     locked: 0
