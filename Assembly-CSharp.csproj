@@ -56,10 +56,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BirdMovement.cs" />
+    <Compile Include="Assets\Scripts\Bird.cs" />
     <Compile Include="Assets\Scripts\Barrier.cs" />
     <Compile Include="Assets\Scripts\BarrierSpawner.cs" />
     <Compile Include="Assets\Scripts\ObjectDestroyer.cs" />
+    <Compile Include="Assets\Scripts\PassageExit.cs" />
+    <Compile Include="Assets\Scripts\Score.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

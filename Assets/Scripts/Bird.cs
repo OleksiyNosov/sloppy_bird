@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BirdMovement : MonoBehaviour
+public class Bird : MonoBehaviour
 {
     [SerializeField] float jumpForce = 5f;
 
