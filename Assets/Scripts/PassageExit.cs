@@ -6,6 +6,9 @@ public class PassageExit : MonoBehaviour
 {
     private void OnTriggerExit2D(Collider2D collision)
     {
-        FindObjectOfType<Score>().IncrementScore();
+        var bird = collision.GetComponent<Bird>();
+
+        if (bird)
+            FindObjectOfType<Score>().IncrementScore();
     }
 }

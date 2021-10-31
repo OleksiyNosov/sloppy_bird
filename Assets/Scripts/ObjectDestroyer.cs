@@ -7,8 +7,6 @@ public class ObjectDestroyer : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision);
-
         var barrier = collision.GetComponent<Barrier>();
 
         if (barrier)
