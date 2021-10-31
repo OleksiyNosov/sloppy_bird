@@ -7,9 +7,13 @@ public class Bird : MonoBehaviour
 {
     [SerializeField] float jumpForce = 5f;
 
+    [SerializeField] float maxPositiveRoatation = 45f;
+    [SerializeField] float maxNegativeRoatation = -45f;
+
     private Rigidbody2D rigidBody;
 
     private bool isReadyForJump = true;
+    private float kumpVerticalVelovity = 0f;
 
     private void Start()
     {
@@ -17,6 +21,12 @@ public class Bird : MonoBehaviour
     }
 
     private void Update()
+    {
+        Jump();
+        Rotate();
+    }
+
+    private void Jump()
     {
         var isTouching = Touchscreen.current.primaryTouch.press.isPressed;
 
@@ -35,7 +45,22 @@ public class Bird : MonoBehaviour
 
             rigidBody.velocity += jumpVector;
 
+            kumpVerticalVelovity = rigidBody.velocity.y;
+
             return;
         }
     }
+    private void Rotate()
+    {
+        if (kumpVerticalVelovity <= Mathf.Epsilon)
+            return;
+
+        var velocityPercentage = rigidBody.velocity.y / kumpVerticalVelovity;
+
+        var angle = velocityPercentage * maxPositiveRoatation;
+        var angleClamp = Mathf.Clamp(angle, maxNegativeRoatation, maxPositiveRoatation);
+
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, angleClamp);
+    }
+
 }

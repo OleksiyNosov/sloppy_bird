@@ -1810,6 +1810,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2154542740875931757, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: maxNegativeRoatation
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154542740875931757, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: maxPositiveRoatation
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 2154542740875931759, guid: 562f410594e8301419655d189d0c1b16, type: 3}
       propertyPath: m_Name
       value: Bird
