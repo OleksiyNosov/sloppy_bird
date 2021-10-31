@@ -19,7 +19,7 @@ public class BarrierSpawner : MonoBehaviour
         foreach (var barrier in barriers)
         {
             barrier.gameObject.SetActive(false);
-            Destroy(barrier);
+            Destroy(barrier.gameObject);
         }
     }
 

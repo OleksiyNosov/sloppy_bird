@@ -16,6 +16,6 @@ public class ObjectDestroyer : MonoBehaviour
     private void PerishObject(Barrier barrier)
     {
         barrier.gameObject.SetActive(false);
-        Destroy(barrier);
+        Destroy(barrier.gameObject);
     }
 }
