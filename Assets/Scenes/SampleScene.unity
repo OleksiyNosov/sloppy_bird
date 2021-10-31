@@ -336,7 +336,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1307,7 +1307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdPrefab: {fileID: 2154542740875931759, guid: 562f410594e8301419655d189d0c1b16, type: 3}
-  startPosition: {x: -2, y: 0}
+  startPosition: {x: -1.5, y: 0}
 --- !u!114 &1308947647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1772,7 +1772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154542740875931756, guid: 562f410594e8301419655d189d0c1b16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2154542740875931756, guid: 562f410594e8301419655d189d0c1b16, type: 3}
       propertyPath: m_LocalPosition.y
