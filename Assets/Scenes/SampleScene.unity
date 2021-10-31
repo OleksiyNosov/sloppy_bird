@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barrierPrefab: {fileID: 6362033633390323153, guid: 8fa987c3d14f0834d9b39be8f84cdbd0, type: 3}
-  barrierStartPotion: {x: 6, y: 0}
+  barrierStartPotion: {x: 5, y: 0}
   verticalOffsetDelat: 1
   spawnInterval: 3
 --- !u!114 &1308947645
