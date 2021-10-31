@@ -11,7 +11,17 @@ public class Score : MonoBehaviour
 
     public void IncrementScore()
     {
-        score++;
+        SetScore(score + 1);
+    }
+
+    public void Reset()
+    {
+        SetScore(0);
+    }
+
+    private void SetScore(int newScore)
+    {
+        score = newScore;
 
         RefreshScoreUI();
     }

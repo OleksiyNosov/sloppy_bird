@@ -10,6 +10,18 @@ public class BarrierSpawner : MonoBehaviour
     [SerializeField] float spawnInterval = 5f;
 
     private float lastSpawnTime = 0f;
+    
+    public void Reset()
+    {
+        lastSpawnTime = 0;
+        
+        var barriers = FindObjectsOfType<Barrier>();
+        foreach (var barrier in barriers)
+        {
+            barrier.gameObject.SetActive(false);
+            Destroy(barrier);
+        }
+    }
 
     private void Update()
     {
