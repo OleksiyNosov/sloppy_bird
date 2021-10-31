@@ -1812,7 +1812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154542740875931757, guid: 562f410594e8301419655d189d0c1b16, type: 3}
       propertyPath: maxNegativeRoatation
-      value: -40
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 2154542740875931757, guid: 562f410594e8301419655d189d0c1b16, type: 3}
       propertyPath: maxPositiveRoatation
@@ -1821,6 +1821,38 @@ PrefabInstance:
     - target: {fileID: 2154542740875931759, guid: 562f410594e8301419655d189d0c1b16, type: 3}
       propertyPath: m_Name
       value: Bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154542740875931762, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: m_Size.x
+      value: 0.887869
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154542740875931762, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7469048
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154542740875931762, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0560655
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154542740875931762, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.011213094
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154542742416349675, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0e6c70a4a7fdec4a930ee2a5cf146c5, type: 3}
+    - target: {fileID: 2154542742416349675, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154542742416349675, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154542742416349675, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 562f410594e8301419655d189d0c1b16, type: 3}
