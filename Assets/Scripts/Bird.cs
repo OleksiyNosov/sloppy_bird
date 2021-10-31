@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch; 
 
 public class Bird : MonoBehaviour
 {
@@ -15,9 +18,10 @@ public class Bird : MonoBehaviour
 
     private void Update()
     {
-        var jumpPressed = Input.GetButtonDown("Jump");
+        var touchCount = Touch.activeTouches.Count;
+        var isTouching = touchCount > 0;
 
-        if (jumpPressed)
+        if (isTouching)
         {
             var jumpVector = Vector2.up * jumpForce;
             
