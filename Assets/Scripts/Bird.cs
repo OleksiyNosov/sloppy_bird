@@ -36,6 +36,7 @@ public class Bird : MonoBehaviour
         isHit = true;
         jumpVerticalVelovity = 0f;
         animator.SetBool(IS_HIT, true);
+        rigidBody.constraints = RigidbodyConstraints2D.None;
     }
 
     public void Reset()
@@ -44,6 +45,7 @@ public class Bird : MonoBehaviour
         animator.SetBool(IS_HIT, false);
         jumpVerticalVelovity = 0f;
         transform.rotation = Quaternion.identity;
+        rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
     }
 
     private void Jump()
