@@ -392,8 +392,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 568747761}
-  - component: {fileID: 568747762}
   - component: {fileID: 568747763}
+  - component: {fileID: 568747762}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barrierPrefab: {fileID: 6362033633390323153, guid: 8fa987c3d14f0834d9b39be8f84cdbd0, type: 3}
-  barrierStartPotion: {x: 5, y: 0}
+  barrierStartPotion: {x: 4, y: 0}
   verticalOffsetDelat: 1
   spawnInterval: 3
 --- !u!114 &1308947645
@@ -1294,6 +1294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4fde903e1ff884cbd0219e6b4ad8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetGameDelay: 3
 --- !u!114 &1308947646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1816,27 +1817,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 562f410594e8301419655d189d0c1b16, type: 3}
---- !u!1 &2154542740400713379 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2154542740875931759, guid: 562f410594e8301419655d189d0c1b16, type: 3}
-  m_PrefabInstance: {fileID: 2154542740400713378}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2154542740400713380
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2154542740400713379}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a0fbb2164a203f44598051dd243b53a4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

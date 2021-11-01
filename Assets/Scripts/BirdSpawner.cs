@@ -14,6 +14,7 @@ public class BirdSpawner : MonoBehaviour
         
         if (bird)
         {
+            bird.Reset();
             bird.transform.position = startPosition;
         }
         else

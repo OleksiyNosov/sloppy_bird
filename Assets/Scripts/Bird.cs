@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class Bird : MonoBehaviour
 {
     const string FLAP_TRIGGER = "Flap";
+    const string IS_HIT = "IsHit";
 
     [SerializeField] float jumpForce = 5f;
 
@@ -16,7 +17,8 @@ public class Bird : MonoBehaviour
     private Animator animator;
 
     private bool isReadyForJump = true;
-    private float kumpVerticalVelovity = 0f;
+    private bool isHit = false;
+    private float jumpVerticalVelovity = 0f;
 
     private void Start()
     {
@@ -29,9 +31,26 @@ public class Bird : MonoBehaviour
         Jump();
         Rotate();
     }
+    public void Hit()
+    {
+        isHit = true;
+        jumpVerticalVelovity = 0f;
+        animator.SetBool(IS_HIT, true);
+    }
+
+    public void Reset()
+    {
+        isHit = false;
+        animator.SetBool(IS_HIT, false);
+        jumpVerticalVelovity = 0f;
+        transform.rotation = Quaternion.identity;
+    }
 
     private void Jump()
     {
+        if (isHit)
+            return;
+
         var isTouching = Touchscreen.current.primaryTouch.press.isPressed;
 
         if (!isTouching && !isReadyForJump)
@@ -49,7 +68,7 @@ public class Bird : MonoBehaviour
 
             rigidBody.velocity += jumpVector;
 
-            kumpVerticalVelovity = rigidBody.velocity.y;
+            jumpVerticalVelovity = rigidBody.velocity.y;
 
             animator.SetTrigger(FLAP_TRIGGER);
 
@@ -58,10 +77,10 @@ public class Bird : MonoBehaviour
     }
     private void Rotate()
     {
-        if (kumpVerticalVelovity <= Mathf.Epsilon)
+        if (jumpVerticalVelovity <= Mathf.Epsilon)
             return;
 
-        var velocityPercentage = rigidBody.velocity.y / kumpVerticalVelovity;
+        var velocityPercentage = rigidBody.velocity.y / jumpVerticalVelovity;
 
         var angle = velocityPercentage * maxPositiveRoatation;
         var angleClamp = Mathf.Clamp(angle, maxNegativeRoatation, maxPositiveRoatation);

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] float resetGameDelay = 3f;
+
     private BarrierSpawner barrierSpawner;
     private BirdSpawner birdSpawner;
     private Score score;
@@ -16,6 +18,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void RestartGame()
+    {
+        barrierSpawner.Stop();
+
+        Invoke(nameof(Reset), resetGameDelay);
+    }
+
+    private void Reset()
     {
         barrierSpawner.Reset();
         birdSpawner.Reset();
