@@ -5,12 +5,15 @@ using UnityEngine.InputSystem;
 
 public class Bird : MonoBehaviour
 {
+    const string FLAP_TRIGGER = "Flap";
+
     [SerializeField] float jumpForce = 5f;
 
     [SerializeField] float maxPositiveRoatation = 45f;
     [SerializeField] float maxNegativeRoatation = -45f;
 
     private Rigidbody2D rigidBody;
+    private Animator animator;
 
     private bool isReadyForJump = true;
     private float kumpVerticalVelovity = 0f;
@@ -18,6 +21,7 @@ public class Bird : MonoBehaviour
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -46,6 +50,8 @@ public class Bird : MonoBehaviour
             rigidBody.velocity += jumpVector;
 
             kumpVerticalVelovity = rigidBody.velocity.y;
+
+            animator.SetTrigger(FLAP_TRIGGER);
 
             return;
         }
