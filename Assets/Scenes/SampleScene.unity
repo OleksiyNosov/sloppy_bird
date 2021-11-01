@@ -1815,5 +1815,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird
       objectReference: {fileID: 0}
+    - target: {fileID: 2154542742416349669, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: m_Name
+      value: Square
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 562f410594e8301419655d189d0c1b16, type: 3}
