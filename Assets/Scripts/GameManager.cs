@@ -8,12 +8,21 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] float stopGameDelay = 3f;
 
+    enum GameState
+    {
+        Playing,
+        EndGameMenu,
+    }
+
     private BarrierSpawner barrierSpawner;
     private BirdSpawner birdSpawner;
     private Score score;
+    private GameState gameState;
 
     private void Start()
     {
+        gameState = GameState.Playing;
+
         barrierSpawner = GetComponent<BarrierSpawner>();
         birdSpawner = GetComponent<BirdSpawner>();
         score = GetComponent<Score>();
@@ -21,11 +30,19 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
+        if (gameState == GameState.EndGameMenu) return;
+
+        gameState = GameState.EndGameMenu;
+
         Invoke(nameof(StopGame), stopGameDelay);
     }
 
     public void StartGame()
     {
+        gameState = GameState.Playing;
+
+        restartGamePanel.SetActive(false);
+
         barrierSpawner.Reset();
         birdSpawner.Reset();
         score.Reset();
