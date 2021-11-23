@@ -881,6 +881,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3d1e8ed480391428368c24f9197917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resultMenu: {fileID: 0}
+  currentScoreText: {fileID: 1176465546}
+  bestScoreText: {fileID: 1961245610}
 --- !u!1 &1037701486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1261,7 @@ GameObject:
   - component: {fileID: 1308947646}
   - component: {fileID: 1308947644}
   - component: {fileID: 1308947647}
+  - component: {fileID: 1308947648}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1307,7 +1311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4fde903e1ff884cbd0219e6b4ad8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restartGamePanel: {fileID: 1544361650}
   stopGameDelay: 0.5
 --- !u!114 &1308947646
 MonoBehaviour:
@@ -1337,6 +1340,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   scoreText: {fileID: 1037701488}
+--- !u!114 &1308947648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308947642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3d1e8ed480391428368c24f9197917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resultMenu: {fileID: 883524414}
+  currentScoreText: {fileID: 1176465546}
+  bestScoreText: {fileID: 1961245610}
 --- !u!1 &1544361650
 GameObject:
   m_ObjectHideFlags: 0
