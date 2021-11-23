@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scripts\Barrier.cs" />
     <Compile Include="Assets\Scripts\BirdSpawner.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Scripts\ResultMenuHandler.cs" />
+    <Compile Include="Assets\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
