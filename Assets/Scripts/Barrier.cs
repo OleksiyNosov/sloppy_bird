@@ -11,9 +11,4 @@ public class Barrier : MonoBehaviour
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
-
-    public void Stop()
-    {
-        speed = 0;
-    }
 }

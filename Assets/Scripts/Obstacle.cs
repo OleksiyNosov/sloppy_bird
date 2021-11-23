@@ -13,7 +13,7 @@ public class Obstacle : MonoBehaviour
         {
             bird.Hit();
 
-            FindObjectOfType<GameManager>().RestartGame();
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }

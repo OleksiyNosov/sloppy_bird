@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] float resetGameDelay = 3f;
+    [SerializeField] GameObject restartGamePanel;
+
+    [SerializeField] float stopGameDelay = 3f;
 
     private BarrierSpawner barrierSpawner;
     private BirdSpawner birdSpawner;
@@ -17,17 +19,34 @@ public class GameManager : MonoBehaviour
         score = GetComponent<Score>();
     }
 
-    public void RestartGame()
+    public void EndGame()
     {
-        barrierSpawner.Stop();
-
-        Invoke(nameof(Reset), resetGameDelay);
+        Invoke(nameof(StopGame), stopGameDelay);
     }
 
-    private void Reset()
+    public void StartGame()
     {
         barrierSpawner.Reset();
         birdSpawner.Reset();
         score.Reset();
+
+        StartTime();
+    }
+
+    private void StartTime()
+    {
+        Time.timeScale = 1;
+    }
+
+    private void StopTime()
+    {
+        Time.timeScale = 0;
+    }
+
+    private void StopGame()
+    {
+        StopTime();
+
+        restartGamePanel.SetActive(true);
     }
 }

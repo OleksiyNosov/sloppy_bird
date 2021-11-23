@@ -9,12 +9,10 @@ public class BarrierSpawner : MonoBehaviour
     [SerializeField] float verticalOffsetDelat = 1f;
     [SerializeField] float spawnInterval = 5f;
 
-    private bool spawnActive = true;
     private float lastSpawnTime = 0f;
     
     public void Reset()
     {
-        spawnActive = true;
         lastSpawnTime = 0;
         
         var barriers = FindObjectsOfType<Barrier>();
@@ -25,23 +23,8 @@ public class BarrierSpawner : MonoBehaviour
         }
     }
 
-    public void Stop()
-    {
-        spawnActive = false;
-
-        var barriers = FindObjectsOfType<Barrier>();
-
-        foreach (var barrier in barriers)
-        {
-            barrier.Stop();
-        }
-    }
-
     private void Update()
     {
-        if (!spawnActive)
-            return;
-
         lastSpawnTime += Time.deltaTime;
 
         if (lastSpawnTime >= spawnInterval)

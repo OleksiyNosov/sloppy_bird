@@ -1307,7 +1307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4fde903e1ff884cbd0219e6b4ad8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetGameDelay: 3
+  stopGameDelay: 0.5
 --- !u!114 &1308947646
 MonoBehaviour:
   m_ObjectHideFlags: 0
