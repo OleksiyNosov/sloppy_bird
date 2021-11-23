@@ -808,7 +808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &883524415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1307,6 +1307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4fde903e1ff884cbd0219e6b4ad8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartGamePanel: {fileID: 1544361650}
   stopGameDelay: 0.5
 --- !u!114 &1308947646
 MonoBehaviour:
@@ -1348,12 +1349,12 @@ GameObject:
   - component: {fileID: 1544361653}
   - component: {fileID: 1544361652}
   m_Layer: 5
-  m_Name: RestartGamePanel
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1544361651
 RectTransform:
   m_ObjectHideFlags: 0

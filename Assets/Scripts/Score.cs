@@ -19,9 +19,29 @@ public class Score : MonoBehaviour
         SetScore(0);
     }
 
+    public void SaveBestScore()
+    {
+        if (score > GetBestScore())
+        {
+            PlayerPreferences.SetBestScore(score);
+        }
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public int GetBestScore()
+    {
+        return PlayerPreferences.GetBestScore();
+    }
+
     private void SetScore(int newScore)
     {
         score = newScore;
+
+        SaveBestScore();
 
         RefreshScoreUI();
     }
