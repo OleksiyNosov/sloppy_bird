@@ -49,6 +49,7 @@ public class Bird : MonoBehaviour
         animator.SetBool(IS_HIT, false);
         jumpVerticalVelovity = 0f;
         transform.rotation = Quaternion.identity;
+        rigidBody.velocity = Vector2.zero;
         rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
     }
 
