@@ -20,10 +20,14 @@ public class Bird : MonoBehaviour
     private bool isHit = false;
     private float jumpVerticalVelovity = 0f;
 
+    private GameManager gameManager;
+
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     private void Update()
@@ -50,6 +54,9 @@ public class Bird : MonoBehaviour
 
     private void Jump()
     {
+        if (!gameManager.IsPlaying()) 
+            return;
+
         if (isHit)
             return;
 

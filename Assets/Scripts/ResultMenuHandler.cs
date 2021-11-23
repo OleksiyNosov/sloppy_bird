@@ -27,6 +27,6 @@ public class ResultMenuHandler : MonoBehaviour
 
     public void Play()
     {
-        FindObjectOfType<GameManager>().StartGame();
+        FindObjectOfType<GameManager>().RestartGame();
     }
 }
