@@ -61,14 +61,16 @@
     <Compile Include="Assets\Scripts\ResultMenuHandler.cs" />
     <Compile Include="Assets\Scripts\PassageExit.cs" />
     <Compile Include="Assets\Scripts\ObjectDestroyer.cs" />
+    <Compile Include="Assets\Scripts\StartOverlayHandler.cs" />
     <Compile Include="Assets\Scripts\Bird.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PlayerPreferences.cs" />
     <Compile Include="Assets\Scripts\Barrier.cs" />
     <Compile Include="Assets\Scripts\BirdSpawner.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
-    <Compile Include="Assets\Scripts\StartOverlayHandler.cs" />
     <Compile Include="Assets\Scripts\GameInfoHandler.cs" />
+    <Compile Include="Assets\ToWorld.cs" />
+    <Compile Include="Assets\UpperBoundary.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
