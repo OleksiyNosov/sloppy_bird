@@ -69,8 +69,7 @@
     <Compile Include="Assets\Scripts\BirdSpawner.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\GameInfoHandler.cs" />
-    <Compile Include="Assets\ToWorld.cs" />
-    <Compile Include="Assets\UpperBoundary.cs" />
+    <Compile Include="Assets\Scripts\UpperBoundary.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
