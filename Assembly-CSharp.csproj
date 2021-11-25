@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\ResultMenuHandler.cs" />
     <Compile Include="Assets\Scripts\PassageExit.cs" />
     <Compile Include="Assets\Scripts\ObjectDestroyer.cs" />
+    <Compile Include="Assets\Scripts\UpperBoundary.cs" />
     <Compile Include="Assets\Scripts\StartOverlayHandler.cs" />
     <Compile Include="Assets\Scripts\Bird.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
@@ -69,7 +70,7 @@
     <Compile Include="Assets\Scripts\BirdSpawner.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\GameInfoHandler.cs" />
-    <Compile Include="Assets\Scripts\UpperBoundary.cs" />
+    <Compile Include="Assets\Scripts\Parallax.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
