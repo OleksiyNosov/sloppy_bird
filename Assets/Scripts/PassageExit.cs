@@ -4,11 +4,28 @@ using UnityEngine;
 
 public class PassageExit : MonoBehaviour
 {
+    private bool haveBeenTriggered = false;
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        var bird = collision.GetComponent<Bird>();
+        if (haveBeenTriggered) { return; }
 
-        if (bird)
-            FindObjectOfType<Score>().IncrementScore();
+        var bird = collision.GetComponent<Bird>();
+        
+        if (bird && havePassed(bird))
+            IncrementScore();
+
+    }
+
+    private void IncrementScore()
+    {
+        haveBeenTriggered = true;
+
+        FindObjectOfType<Score>().IncrementScore();
+    }
+
+    private bool havePassed(Bird bird)
+    {
+        return transform.position.x < bird.transform.position.x;
     }
 }
