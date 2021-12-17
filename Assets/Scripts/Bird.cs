@@ -15,9 +15,11 @@ public class Bird : MonoBehaviour
 
     private Rigidbody2D rigidBody;
     private Animator animator;
+    private BirdAutopilot autopilot;
 
     private bool isReadyForJump = true;
     private bool isHit = false;
+
     private float jumpVerticalVelovity = 0f;
 
     private GameManager gameManager;
@@ -26,6 +28,7 @@ public class Bird : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        autopilot = GetComponent<BirdAutopilot>();
 
         gameManager = FindObjectOfType<GameManager>();
     }
@@ -42,6 +45,8 @@ public class Bird : MonoBehaviour
         animator.SetBool(IS_HIT, true);
         rigidBody.constraints = RigidbodyConstraints2D.None;
     }
+
+    public float GetJumpForce() => jumpForce;
 
     public void Reset()
     {
@@ -62,6 +67,9 @@ public class Bird : MonoBehaviour
             return;
 
         var isTouching = Touchscreen.current.primaryTouch.press.isPressed;
+        var autoJump = autopilot.ShouldJump();
+
+        var shouldJump = isTouching || autoJump;
 
         if (!isTouching && !isReadyForJump)
         {
@@ -70,11 +78,13 @@ public class Bird : MonoBehaviour
             return;
         }
 
-        if (isTouching && isReadyForJump)
+        if (shouldJump && isReadyForJump)
         {
             isReadyForJump = false;
 
             var jumpVector = Vector2.up * jumpForce;
+
+            Debug.Log($"{transform.position} - {rigidBody.velocity}");
 
             rigidBody.velocity += jumpVector;
 
@@ -85,6 +95,7 @@ public class Bird : MonoBehaviour
             return;
         }
     }
+
     private void Rotate()
     {
         if (jumpVerticalVelovity <= Mathf.Epsilon)
