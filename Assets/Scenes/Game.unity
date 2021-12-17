@@ -3069,6 +3069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird
       objectReference: {fileID: 0}
+    - target: {fileID: 5747576179561485248, guid: 562f410594e8301419655d189d0c1b16, type: 3}
+      propertyPath: autopilot
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 562f410594e8301419655d189d0c1b16, type: 3}
 --- !u!1001 &2317162812645658081
