@@ -14,3 +14,6 @@ The longer the bird stays alive, the higher the score.
 ## Requirements
 
 - Unity 2020.3.9f1
+
+## Download
+- [Android](https://play.google.com/store/apps/details?id=com.NosovRD.SloppyBird)
